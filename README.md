@@ -1,5 +1,5 @@
 # CDCS110 - Diploma in Computer Science
-A compilation of codes and projects I've written during program (Currently Ongoing)
+A compilation of material, codes, and projects I've written during program (Currently Ongoing)
 
 CSC126 - Foundamentals of Algorithm & Computer Problem Solving
 
