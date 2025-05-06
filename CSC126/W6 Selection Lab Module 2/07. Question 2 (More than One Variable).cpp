@@ -5,10 +5,10 @@ using namespace std;
 int main(){
     float cgpa;
     int amount;
-    char program[8];
+    char program[9];
 
     cout << "\nEnter your program (Diploma / Bachelor): ";
-    cin.getline(program, 8);
+    cin.getline(program, 9);
 
     if (strcmp(program, "Diploma") == 0 || strcmp(program, "diploma") == 0){
         cout << "Enter your CGPA: ";
