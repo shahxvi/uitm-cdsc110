@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example 3"/>
+        <attribute name="authors" value="Eli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-03 12:12:23 AM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTAyOzExOjU1OjUxIFBNOzIxNzk="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTAzOzEyOjEyOjIzIEFNOzE7MjI2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number1, number2, number3, sum, multiplication" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the first number: &quot;" newline="True"/>
+            <input variable="number1"/>
+            <output expression="&quot;Enter the second number: &quot;" newline="True"/>
+            <input variable="number2"/>
+            <output expression="&quot;Enter the third number: &quot;" newline="True"/>
+            <input variable="number3"/>
+            <assign variable="sum" expression="number1 + number2 + number3"/>
+            <assign variable="multiplication" expression="number1 * number2 * number3"/>
+            <output expression="&quot;Your first number is: &quot;&amp;number1" newline="True"/>
+            <output expression="&quot;Your second number is: &quot;&amp;number2" newline="True"/>
+            <output expression="&quot;Your third number is: &quot;&amp;number3" newline="True"/>
+            <output expression="&quot;The sum of the three number is: &quot;&amp;sum" newline="True"/>
+            <output expression="&quot;The multiplication of the three number is: &quot;&amp;multiplication" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

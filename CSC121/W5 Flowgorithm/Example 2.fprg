@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example 7"/>
+        <attribute name="authors" value="Eli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-02 11:52:07 PM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTAyOzEwOjA5OjUyIEFNOzIxNjM="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTAyOzExOjUyOjA3IFBNOzI7MjI4Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="itemName" type="String" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="priceperunit, totalprice, gstTax, totalwithGST, gstRate" type="Real" array="False" size=""/>
+            <assign variable="gstRate" expression="0.035"/>
+            <output expression="&quot;Enter the item name: &quot;" newline="True"/>
+            <input variable="itemName"/>
+            <output expression="&quot;Enter the quantity of item that you want purchase: &quot;" newline="True"/>
+            <input variable="quantity"/>
+            <output expression="&quot;Enter price per unit of the item: RM&quot;" newline="True"/>
+            <input variable="priceperunit"/>
+            <assign variable="totalprice" expression="quantity * priceperunit"/>
+            <assign variable="gstTax" expression="totalprice * gstRate"/>
+            <assign variable="totalwithGST" expression="totalprice + gstTax"/>
+            <output expression="&quot;The item name is &quot;&amp;itemName" newline="True"/>
+            <output expression="&quot;Quantity: &quot;&amp;quantity" newline="True"/>
+            <output expression="&quot;Price per Unit: RM &quot;&amp;priceperunit" newline="True"/>
+            <output expression="&quot;Total Price: RM &quot;&amp;totalprice" newline="True"/>
+            <output expression="&quot;GST(3.5%): RM&quot;&amp;gstTax" newline="True"/>
+            <output expression="&quot;Total all with GST: RM&quot;&amp;totalwithGST" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
