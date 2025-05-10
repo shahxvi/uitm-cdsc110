@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example 7"/>
+        <attribute name="authors" value="Eli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-09 06:30:34 PM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTA5OzAyOjI0OjA2IFBNOzIxODI="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTA5OzA2OjMwOjM0IFBNOzE7MjI5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="t1, t2, p1, p2, V" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter position 1: &quot;" newline="True"/>
+            <input variable="p1"/>
+            <output expression="&quot;Enter position 2: &quot;" newline="True"/>
+            <input variable="p2"/>
+            <output expression="&quot;Enter the start time: &quot;" newline="True"/>
+            <input variable="t1"/>
+            <output expression="&quot;Enter the end time: &quot;" newline="True"/>
+            <input variable="t2"/>
+            <assign variable="V" expression="(p1-p2)/(t1-t2)"/>
+            <output expression="&quot;The velocity, V is &quot; &amp; V" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
