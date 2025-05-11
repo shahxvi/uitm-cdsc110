@@ -17,13 +17,13 @@ This repository serves as a compilation of materials, code, and projects that I 
   - This is where we learn about text, audio, graphics, hyperlinks, authoring tools, and more. The course explores both the technical and creative aspects of multimedia development.
 
 ### Other Semester 1 Courses:
-- **MAT133** – Pre-Calculus  
+- **MAT133** - Pre-Calculus  
   Covers foundational mathematics concepts that support problem-solving and logical thinking in computer science.
 
-- **CTU101** – Prinsip-prinsip Asas Islam  
+- **CTU101** - Prinsip-prinsip Asas Islam  
   An introduction to the fundamental principles and teachings of Islam.
 
-- **HBU111** – Kesatria Negara I  
+- **HBU111** - Kesatria Negara I  
   A compulsory co-curricular module focused on physical training and national service values.
 
 ### Branches:
