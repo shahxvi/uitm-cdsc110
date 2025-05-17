@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 
-int main(){
+int main() {
 
     char category, size;
     char itemcode[5], name[13];
@@ -25,74 +25,121 @@ int main(){
     cin >> quantity;
 
     //Process
-    if (category == 'D' || category == 'd'){
-        if (strcmp (itemcode, "D001") == 0){
+    //D category
+    if (category == 'D' || category == 'd') {
+        
+        //D001 - Birah
+        if (strcmp (itemcode, "D001") == 0) {
             strcpy(name, "Birah");
-            if (size == 'S' || size == 's')
-                price = 20;
-            else if (size == 'M' || size == 'm')
-                price = 90;
-            else if (size == 'L' || size == 'l')
-                price = 150;
-            else{
-                cout << "\nInvalid size";
-                return 0;
+
+            switch (size) {
+                case 'S':
+                case 's':
+                    price = 20;
+                    break;
+                case 'M':
+                case 'm':
+                    price = 90;
+                    break;
+                case 'L':
+                case 'l':
+                    price = 150;
+                    break;
+                default:
+                    cout << "\nInvalid size" << endl;
+                    return 0;
             }
         }
-        else if (strcmp(itemcode, "D002") == 0){
+
+        //D002 - Bongsai
+        else if (strcmp(itemcode, "D002") == 0) {
             strcpy(name, "Bongsai");
-            if (size == 'S' || size == 's')
-                price = 70;
-            else if (size == 'M' || size == 'm')
-                price = 100;
-            else if (size == 'L' || size == 'l')
-                price = 150;
-            else{
-                cout << "\nInvalid size";
-                return 0;
+
+            switch (size) {
+                case 'S':
+                case 's':
+                    price = 70;
+                    break;
+                case 'M':
+                case 'm':
+                    price = 100;
+                    break;
+                case 'L':
+                case 'l':
+                    price = 150;
+                    break;
+                default:
+                    cout << "\nInvalid size" << endl;
+                    return 0;
             }
         }
-        else{
+
+        //Invalid item code
+        else {
             cout << "\nInvalid item code";
             return 0;
         }
     }
 
-    else if (category == 'L' || category == 'l'){
-        if (strcmp(itemcode, "L001") == 0){
+    //L category
+    else if (category == 'L' || category == 'l') {
+        
+        //L001 - Pinang Merah
+        if (strcmp(itemcode, "L001") == 0) {
             strcpy(name, "Pinang Merah");
-            if (size == 'S' || size == 's')
-                price = 30;
-            else if (size == 'M' || size == 'm')
-                price = 60;
-            else if (size == 'L' || size == 'l')
-                price = 120;
-            else{
-                cout << "\nInvalid size";
-                return 0;
+            
+            switch (size) {
+                case 'S':
+                case 's':
+                    price = 30;
+                    break;
+                case 'M':
+                case 'm':
+                    price = 60;
+                    break;
+                case 'L':
+                case 'l':
+                    price = 120;
+                    break;
+                default:
+                    cout << "\nInvalid size" << endl;
+                    return 0;
             }
         }
-        else if (strcmp(itemcode, "L002") == 0){
+        
+        //L002 - Pagoda
+        else if (strcmp(itemcode, "L002") == 0) {
             strcpy(name, "Pagoda");
-            if (size == 'S' || size == 's')
-                price = 25;
-            else if (size == 'M' || size == 'm')
-                price = 35;
-            else if (size == 'L' || size == 'l')
-                price = 45;
-            else{
-                cout << "\nInvalid size";
-                return 0;
+            
+            switch (size) {
+                case 'S':
+                case 's':
+                    price = 25;
+                    break;
+                case 'M':
+                case 'm':
+                    price = 35;
+                    break;
+                case 'L':
+                case 'l':
+                    price = 45;
+                    break;
+                default:
+                    cout << "\nInvalid size" << endl;
+                    return 0;
             }
         }
-        else{
-            cout << "\nInvalid item code";
+        
+        //Invalid item code
+        else {
+            cout << "\nInvalid item code" << endl;
             return 0;
         }
     }
 
-    else{
-        cout << "\nInvalid category";
+    //Invalid category
+    else {
+        cout << "\nInvalid category" << endl;
         return 0;
     }
 
