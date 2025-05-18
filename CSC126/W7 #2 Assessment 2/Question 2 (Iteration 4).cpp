@@ -158,10 +158,13 @@ int main() {
 
     totalPrice = price * quantity;
 
-    cout << fixed << showpoint << setprecision(2);
-    cout << "\nPrice: RM" << price << endl;
-    cout << "Quantity: " << quantity << endl;
-    cout << "Total Price: RM" << totalPrice << endl;
+    if (price != 0) {
+        cout << fixed << showpoint << setprecision(2);
+        cout << "\nPrice: RM" << price << endl;
+        cout << "Quantity: " << quantity << endl;
+        cout << "Total Price: RM" << totalPrice << endl;
+    else
+        cout << "\nInvalid size" << endl;
 
     return 0;
 }
