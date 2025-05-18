@@ -129,15 +129,15 @@ int main() {
         switch (size) {
         case 'S':
         case 's':
-            price = 18.00;
+            price = 25.00;
             break;
         case 'M':
         case 'm':
-            price = 28.00;
+            price = 35.00;
             break;
         case 'L':
         case 'l':
-            price = 42.00;
+            price = 45.00;
             break;
         default:
             cout << "\nInvalid size" << endl;
