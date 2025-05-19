@@ -163,6 +163,8 @@ int main() {
         cout << "\nPrice: RM" << price << endl;
         cout << "Quantity: " << quantity << endl;
         cout << "Total Price: RM" << totalPrice << endl;
+    }
+    
     else
         cout << "\nInvalid size" << endl;
 
