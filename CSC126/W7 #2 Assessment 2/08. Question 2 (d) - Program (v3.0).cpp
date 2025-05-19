@@ -122,7 +122,7 @@ int main() {
         strcpy(name, "Pagoda");
         
         cout << "\n" << itemcode << " - " << name << " Price per Size:" << endl;
-        cout << "Small (S) =  RM18 | Medium (M) = RM28 | Large (L) = RM42" << endl;
+        cout << "Small (S) =  RM25 | Medium (M) = RM35 | Large (L) = RM45" << endl;
         cout << "\nEnter the size (S, M or L): ";
         cin >> size;
 
