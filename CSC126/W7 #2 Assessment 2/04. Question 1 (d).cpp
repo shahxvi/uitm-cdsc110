@@ -1,19 +1,21 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main() {
 
     //Initialize variables
     float purchaseAmount, points, additionalPoints, totalPoints;
-    char productRating, preferredPurchases;
+    char productRating[4], preferredPurchases[4];
 
     //Input
     cout << "\nEnter the amount of purchases: RM";
     cin >> purchaseAmount;
-    cout << "Have you successfully rated a product? (Y/N): ";
-    cin >> productRating;
-    cout << "Is the purchases made from preferred sellers? (Y/N): ";
-    cin >> preferredPurchases;
+    cout << "Have you successfully rated a product? (Yes / No): ";
+    cin.ignore();
+    cin.getline(productRating, 4);
+    cout << "Is the purchases made from preferred sellers? (Yes / No): ";
+    cin.getline(preferredPurchases, 4);
 
     //Process
     if (purchaseAmount > 0 && purchaseAmount < 500)
@@ -25,13 +27,13 @@ int main() {
     else 
         points = 0;
 
-    if (productRating == 'Y' || productRating == 'y')
-        if (preferredPurchases == 'Y' || preferredPurchases == 'y')
+    if (strcmp(productRating, "Yes") == 0 || strcmp(productRating, "yes") == 0)
+        if (strcmp(preferredPurchases, "Yes") == 0 || strcmp(preferredPurchases, "yes") == 0)
             additionalPoints = 100;
         else
             additionalPoints = 50;
     else
-        if (preferredPurchases == 'Y' || preferredPurchases == 'y')
+        if (strcmp(preferredPurchases, "Yes") == 0 || strcmp(preferredPurchases, "yes") == 0)
             additionalPoints = 50;
         else
             additionalPoints = 0;
