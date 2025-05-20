@@ -39,16 +39,19 @@ int main () {
 
     }
 
-    //Display the smallest & largest number
+    //1 - find & display the largest number
     cout << "\nThe smallest number is: " << smallest << endl;
     cout << "The largest number is: " << largest << endl;
 
-    //find & display the average of all numbers
+    //2 - calculate & display the total of all numbers
     float average = (float) total / n;
     cout << "\nThe average of all numbers is: " << average << endl;
 
-    //find the number of odd & even numbers
+    //3 - find & display the number of odd and even numbers
     cout << "\nThe number of odd numbers is: " << odd << endl;
     cout << "The number of even numbers is: " << even << endl;
 
+    //4 - find & display the average even numbers
+    float averageEven = (float) total / even;
+    cout << "\nThe average of even numbers is: " << averageEven << endl;
 }
