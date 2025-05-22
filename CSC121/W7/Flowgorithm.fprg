@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CSC121 Practical Test"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-23 12:39:18 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMjswOToyNDoxNyBQTTsyMjky"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMjozOToxOCBBTTs0OTsyNDQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="currency, exchangeRate, serviceTax, governmentTax, totalTax, exchangeType, originalAmount" type="Real" array="False" size=""/>
+            <declare name="exchange, forex" type="String" array="False" size=""/>
+            <output expression="&quot;Welcome to the Currency Exchange Service!&quot;" newline="True"/>
+            <output expression="&quot;1 - From MYR to Foreign Currency&quot;" newline="True"/>
+            <output expression="&quot;2 - From Foreign Currency to MYR&quot;" newline="True"/>
+            <output expression="&quot;Enter Your Choice (1/2): &quot;" newline="True"/>
+            <input variable="exchangeType"/>
+            <if expression="exchangeType == 1">
+                <then>
+                    <output expression="&quot;Please choose the currecny to convert to (USD / EUR): &quot;" newline="True"/>
+                    <input variable="exchange"/>
+                    <output expression="&quot;Enter the amount to be converted in MYR: &quot;" newline="True"/>
+                    <input variable="currency"/>
+                    <assign variable="originalAmount" expression="currency"/>
+                    <if expression="currency &lt; 10000">
+                        <then>
+                            <assign variable="serviceTax" expression="0.015"/>
+                            <assign variable="governmentTax" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="serviceTax" expression="0.015"/>
+                            <assign variable="governmentTax" expression="0.025"/>
+                        </else>
+                    </if>
+                    <if expression="exchange == &quot;USD&quot; || exchange == &quot;usd&quot;">
+                        <then>
+                            <assign variable="exchangeRate" expression="0.23"/>
+                            <output expression="&quot;Exchange Rate: 1 MYR = 0.23 USD&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="exchange == &quot;EUR&quot; || exchange == &quot;eur&quot;">
+                                <then>
+                                    <assign variable="exchangeRate" expression="0.21"/>
+                                    <output expression="&quot;1 MYR = 0.21 EUR&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Invalid Exchange&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="totalTax" expression="currency * (serviceTax + governmentTax)"/>
+                    <assign variable="currency" expression="currency - totalTax"/>
+                    <assign variable="currency" expression="currency * exchangeRate"/>
+                    <output expression="&quot;Amount to Convert: RM&quot; &amp; originalAmount" newline="True"/>
+                    <if expression="exchange == &quot;USD&quot; || exchange == &quot;usd&quot;">
+                        <then>
+                            <output expression="&quot;Amount to Recieve: $&quot; &amp; currency" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="exchange == &quot;EUR&quot; || exchange == &quot;eur&quot;">
+                                <then/>
+                                <else/>
+                            </if>
+                            <output expression="&quot;Amount to Recieve: &#8364;&quot; &amp; currency" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="exchangeType == 2">
+                        <then>
+                            <output expression="&quot;Please choose the currecny to convert From (USD / EUR / JPY): &quot;" newline="True"/>
+                            <input variable="exchange"/>
+                            <output expression="&quot;Enter the amount to be converted to MYR: &quot;" newline="True"/>
+                            <input variable="currency"/>
+                            <assign variable="originalAmount" expression="currency"/>
+                            <if expression="exchange == &quot;USD&quot; || exchange == &quot;usd&quot;">
+                                <then>
+                                    <assign variable="exchangeRate" expression="4.35"/>
+                                    <output expression="&quot;Exchange Rate: 1 USD = 4.35 MYR&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="exchange == &quot;EUR&quot; || exchange == &quot;eur&quot;">
+                                        <then>
+                                            <assign variable="exchangeRate" expression="4.80"/>
+                                            <output expression="&quot;Exchange Rate: 1 EUR = 4.80 MYR&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="exchange == &quot;JPY&quot; || exchange == &quot;jpy&quot;">
+                                                <then>
+                                                    <assign variable="exchangeRate" expression="0.037"/>
+                                                    <output expression="&quot;Exchange Rate: 1 JPY = 0.037 MYR&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Invalid Exchange&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <assign variable="governmentTax" expression="0"/>
+                            <assign variable="serviceTax" expression="0.05"/>
+                            <assign variable="currency" expression="currency * exchangeRate"/>
+                            <assign variable="totalTax" expression="currency * (serviceTax + governmentTax)"/>
+                            <output expression="&quot;Converted Amount: RM&quot; &amp; currency" newline="True"/>
+                            <output expression="&quot;Amount to Recieve: RM&quot; &amp; currency - totalTax" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Invalid Exchange&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Service Tax: &quot; &amp; (serviceTax * 100) &amp; &quot;% | RM&quot; &amp; originalAmount * serviceTax" newline="True"/>
+            <output expression="&quot;Government Tax: &quot; &amp; (governmentTax * 100) &amp; &quot;% | RM&quot; &amp; originalAmount * governmentTax" newline="True"/>
+            <output expression="&quot;Total Tax: &quot;&amp; (serviceTax+governmentTax) * 100 &amp; &quot;% | RM&quot; &amp; totalTax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
