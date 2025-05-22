@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ringgit &amp; Cents"/>
+        <attribute name="authors" value="Eli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-09 06:30:03 PM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTA5OzExOjQzOjEzIEFNOzIxNjY="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTA5OzA2OjMwOjAzIFBNOzE7MjI4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="value, ringgit" type="Integer" array="False" size=""/>
+            <declare name="cents" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the value number&quot;" newline="True"/>
+            <input variable="value"/>
+            <assign variable="ringgit" expression="value / 100"/>
+            <assign variable="cents" expression="value-ringgit*100"/>
+            <output expression="&quot;The amount of ringgit is RM&quot; &amp; ringgit" newline="True"/>
+            <output expression="&quot;The amount of cents is &quot; &amp; cents" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
