@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exercise 1"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-23 01:13:25 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMjo0Njo0MCBBTTsyMjcy"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMToxMzoyNSBBTTs4OzIzODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="destination" type="String" array="False" size=""/>
+            <declare name="code" type="Integer" array="False" size=""/>
+            <declare name="adult, child, adultFare, childFare, tax, totalFare" type="Real" array="False" size=""/>
+            <output expression="&quot;SEPTEMBER Promotion 2025 [from September 10 - 30]&quot;" newline="True"/>
+            <output expression="&quot;=========================================&quot;" newline="True"/>
+            <output expression="&quot;1. KL - Bali&quot;" newline="True"/>
+            <output expression="&quot;2. KL - Perth&quot;" newline="True"/>
+            <output expression="&quot;3. Kuching - Singapore&quot;" newline="True"/>
+            <output expression="&quot;4. Kuching - Beijing&quot;" newline="True"/>
+            <output expression="&quot;=========================================&quot;" newline="True"/>
+            <output expression="&quot;Enter Destination Code: &quot;" newline="True"/>
+            <input variable="code"/>
+            <output expression="&quot;Enter Number of Adult Passenger(s): &quot;" newline="True"/>
+            <input variable="adult"/>
+            <output expression="&quot;Enter Number of Child Passenger(s): &quot;" newline="True"/>
+            <input variable="child"/>
+            <if expression="code == 1">
+                <then>
+                    <assign variable="destination" expression="&quot;KL - Bali&quot;"/>
+                    <assign variable="adultFare" expression="105.00"/>
+                    <assign variable="childFare" expression="50.00"/>
+                </then>
+                <else>
+                    <if expression="code == 2">
+                        <then>
+                            <assign variable="destination" expression="&quot;KL - Perth&quot;"/>
+                            <assign variable="adultFare" expression="105.00"/>
+                            <assign variable="childFare" expression="50.00"/>
+                        </then>
+                        <else>
+                            <if expression="code == 3">
+                                <then>
+                                    <assign variable="destination" expression="&quot;Kuching - Singapore&quot;"/>
+                                    <assign variable="adultFare" expression="105.00"/>
+                                    <assign variable="childFare" expression="50.00"/>
+                                </then>
+                                <else>
+                                    <if expression="code == 4">
+                                        <then>
+                                            <assign variable="destination" expression="&quot;Kuching - Beijing&quot;"/>
+                                            <assign variable="adultFare" expression="105.00"/>
+                                            <assign variable="childFare" expression="50.00"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid Destination Code&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Booking Information&quot;" newline="True"/>
+            <output expression="&quot;=========================================&quot;" newline="True"/>
+            <output expression="&quot;Destination: &quot; &amp; destination" newline="True"/>
+            <output expression="&quot;Number of adults: &quot; &amp; adult" newline="True"/>
+            <output expression="&quot;Number of children: &quot; &amp; child" newline="True"/>
+            <assign variable="totalFare" expression="(adult * adultFare) + (child * childFare)"/>
+            <output expression="&quot;Total Fare: RM&quot; &amp; totalFare" newline="True"/>
+            <assign variable="tax" expression="0.15"/>
+            <output expression="&quot;Fare after Tax : RM&quot; &amp; totalFare * (1-tax)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

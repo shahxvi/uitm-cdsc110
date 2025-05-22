@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exercise 2"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-23 01:43:16 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMToyMjo1NiBBTTsyMjcx"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMTo0MzoxNiBBTTs0OzIzODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, id, plan" type="String" array="False" size=""/>
+            <declare name="time, rate, charge, discount" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter Your Name: &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter Your ID: &quot;" newline="True"/>
+            <input variable="id"/>
+            <output expression="&quot;Enter Plan (A/B): &quot;" newline="True"/>
+            <input variable="plan"/>
+            <output expression="&quot;Enter lenght of time (in minutes): &quot;" newline="True"/>
+            <input variable="time"/>
+            <if expression="plan == &quot;A&quot; || plan == &quot;a&quot;">
+                <then>
+                    <if expression="time &gt; 100">
+                        <then>
+                            <assign variable="rate" expression="0.15"/>
+                        </then>
+                        <else>
+                            <if expression="time &gt;= 0 || time &lt;= 100">
+                                <then>
+                                    <assign variable="rate" expression="0.24"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Invalid Time Duration&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="plan == &quot;B&quot; || plan == &quot;b&quot;">
+                        <then>
+                            <if expression="time &gt; 100">
+                                <then>
+                                    <assign variable="rate" expression="0.25"/>
+                                </then>
+                                <else>
+                                    <if expression="time &gt;= 0 || time &lt;= 100">
+                                        <then>
+                                            <assign variable="rate" expression="0.17"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid Time Duration&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Invalid Time Plan&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="charge" expression="time * rate"/>
+            <output expression="&quot;Customer Name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Customer ID: &quot; &amp; id" newline="True"/>
+            <output expression="&quot;Plan: &quot; &amp; plan" newline="True"/>
+            <output expression="&quot;Time: &quot; &amp; time &amp; &quot; minute(s)&quot;" newline="True"/>
+            <output expression="&quot;Charge: RM&quot; &amp; rate &amp; &quot; per minute&quot;" newline="True"/>
+            <output expression="&quot;Total before Discount: RM&quot; &amp; charge" newline="True"/>
+            <if expression="charge &gt; 100">
+                <then>
+                    <assign variable="discount" expression="0.15"/>
+                    <output expression="&quot;15% Discount for total amount of charge more than RM100&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="discount" expression="0"/>
+                    <output expression="&quot;No dicount for total amount of charge less than RM100&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Total after Discount: RM&quot; &amp; charge * (1-discount)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
