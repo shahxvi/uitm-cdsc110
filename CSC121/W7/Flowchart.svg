@@ -2,6 +2,7 @@
 <!-- Created by Flowgorithm 4.5.0 (http://flowgorithm.org) -->
 
 <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="8680" height="11346">
+	<rect x="0" y="0" width="8680" height="11346" fill="#FFFFFF"/>
 	<g>
 		<polyline fill="none" stroke="#404040" stroke-width="8" stroke-dasharray="none" points="5425,155 5425,230"/>
 		<polygon fill="#404040" stroke="none" points="5425,248 5442,217 5407,217"/>
