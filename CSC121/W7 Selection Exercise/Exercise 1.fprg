@@ -4,16 +4,16 @@
         <attribute name="name" value="Exercise 1"/>
         <attribute name="authors" value="Shah"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-05-23 01:13:25 AM"/>
+        <attribute name="saved" value="2025-05-23 03:21:44 AM"/>
         <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMjo0Njo0MCBBTTsyMjcy"/>
-        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMToxMzoyNSBBTTs4OzIzODI="/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMzoyMTo0NCBBTTsxMDsyNDI1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="destination" type="String" array="False" size=""/>
             <declare name="code" type="Integer" array="False" size=""/>
-            <declare name="adult, child, adultFare, childFare, tax, totalFare" type="Real" array="False" size=""/>
+            <declare name="adult, child, adultFare, childFare, tax, totalFare, fareAfterTax" type="Real" array="False" size=""/>
             <output expression="&quot;SEPTEMBER Promotion 2025 [from September 10 - 30]&quot;" newline="True"/>
             <output expression="&quot;=========================================&quot;" newline="True"/>
             <output expression="&quot;1. KL - Bali&quot;" newline="True"/>
@@ -37,22 +37,22 @@
                     <if expression="code == 2">
                         <then>
                             <assign variable="destination" expression="&quot;KL - Perth&quot;"/>
-                            <assign variable="adultFare" expression="105.00"/>
-                            <assign variable="childFare" expression="50.00"/>
+                            <assign variable="adultFare" expression="250.00"/>
+                            <assign variable="childFare" expression="78.00"/>
                         </then>
                         <else>
                             <if expression="code == 3">
                                 <then>
                                     <assign variable="destination" expression="&quot;Kuching - Singapore&quot;"/>
-                                    <assign variable="adultFare" expression="105.00"/>
-                                    <assign variable="childFare" expression="50.00"/>
+                                    <assign variable="adultFare" expression="59"/>
+                                    <assign variable="childFare" expression="29"/>
                                 </then>
                                 <else>
                                     <if expression="code == 4">
                                         <then>
                                             <assign variable="destination" expression="&quot;Kuching - Beijing&quot;"/>
-                                            <assign variable="adultFare" expression="105.00"/>
-                                            <assign variable="childFare" expression="50.00"/>
+                                            <assign variable="adultFare" expression="199.00"/>
+                                            <assign variable="childFare" expression="109.00"/>
                                         </then>
                                         <else>
                                             <output expression="&quot;Invalid Destination Code&quot;" newline="True"/>
@@ -73,7 +73,8 @@
             <assign variable="totalFare" expression="(adult * adultFare) + (child * childFare)"/>
             <output expression="&quot;Total Fare: RM&quot; &amp; totalFare" newline="True"/>
             <assign variable="tax" expression="0.15"/>
-            <output expression="&quot;Fare after Tax : RM&quot; &amp; totalFare * (1-tax)" newline="True"/>
+            <assign variable="fareAfterTax" expression="totalFare * (1-tax)"/>
+            <output expression="&quot;Fare after Tax : RM&quot; &amp; fareAfterTax" newline="True"/>
         </body>
     </function>
 </flowgorithm>
