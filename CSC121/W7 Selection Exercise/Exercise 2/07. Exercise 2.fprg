@@ -4,15 +4,15 @@
         <attribute name="name" value="Exercise 2"/>
         <attribute name="authors" value="IRFAN SHAH BIN MAIZUL HISHAM"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-05-23 01:43:16 AM"/>
+        <attribute name="saved" value="2025-05-23 10:37:36 AM"/>
         <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMToyMjo1NiBBTTsyMjcx"/>
-        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMTo0MzoxNiBBTTs0OzIzODE="/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMDozNzozNiBBTTs1OzIzODc="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="name, id, plan" type="String" array="False" size=""/>
-            <declare name="time, rate, charge, discount" type="Real" array="False" size=""/>
+            <declare name="time, rate, charge, discount, chargeAfterDiscount" type="Real" array="False" size=""/>
             <output expression="&quot;Enter Your Name: &quot;" newline="True"/>
             <input variable="name"/>
             <output expression="&quot;Enter Your ID: &quot;" newline="True"/>
@@ -84,7 +84,8 @@
                     <output expression="&quot;No dicount for total amount of charge less than RM100&quot;" newline="True"/>
                 </else>
             </if>
-            <output expression="&quot;Total after Discount: RM&quot; &amp; charge * (1-discount)" newline="True"/>
+            <assign variable="chargeAfterDiscount" expression="charge * (1-discount)"/>
+            <output expression="&quot;Total after Discount: RM&quot; &amp; chargeAfterDiscount" newline="True"/>
         </body>
     </function>
 </flowgorithm>
