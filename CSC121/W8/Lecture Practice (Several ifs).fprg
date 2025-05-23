@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Several if burger system"/>
+        <attribute name="authors" value="Eli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-20 06:33:15 PM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTIwOzA1OjE3OjE5IFBNOzIxODQ="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTIwOzA2OjMzOjE1IFBNOzE7MjI4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="patty, cheese, buns" type="String" array="False" size=""/>
+            <declare name="total, pattyPrice, bunPrice, cheesePrice" type="Real" array="False" size=""/>
+            <output expression="&quot;Burger making system&quot;" newline="True"/>
+            <output expression="&quot;Do you want patty?&quot;" newline="True"/>
+            <input variable="patty"/>
+            <output expression="&quot;Do you want buns?&quot;" newline="True"/>
+            <input variable="buns"/>
+            <output expression="&quot;Do you want cheese?&quot;" newline="True"/>
+            <input variable="cheese"/>
+            <if expression="patty == &quot;Yes&quot;">
+                <then>
+                    <assign variable="pattyPrice" expression="3"/>
+                    <output expression="&quot;Burger Patty: RM3&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="buns == &quot;Yes&quot; || buns == &quot;yes&quot;">
+                <then>
+                    <assign variable="bunPrice" expression="2"/>
+                    <output expression="&quot;Buns: RM2&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;A burger without the patty and buns is nothing&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="cheese == &quot;Yes&quot; || cheese == &quot;yes&quot;">
+                <then>
+                    <assign variable="cheesePrice" expression="1"/>
+                    <output expression="&quot;A burger with cheese coming right up!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;no burgers for you!&quot;" newline="True"/>
+                </else>
+            </if>
+            <assign variable="total" expression="pattyPrice + bunPrice + cheesePrice"/>
+            <output expression="&quot;Total: RM&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
