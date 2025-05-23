@@ -4,9 +4,9 @@
         <attribute name="name" value="Exercise 2"/>
         <attribute name="authors" value="IRFAN SHAH BIN MAIZUL HISHAM"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-05-23 10:37:36 AM"/>
+        <attribute name="saved" value="2025-05-23 10:51:06 AM"/>
         <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMToyMjo1NiBBTTsyMjcx"/>
-        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMDozNzozNiBBTTs1OzIzODc="/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMDo1MTowNiBBTTs2OzIzODE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,7 +19,7 @@
             <input variable="id"/>
             <output expression="&quot;Enter Plan (A/B): &quot;" newline="True"/>
             <input variable="plan"/>
-            <output expression="&quot;Enter lenght of time (in minutes): &quot;" newline="True"/>
+            <output expression="&quot;Enter length of time (in minutes): &quot;" newline="True"/>
             <input variable="time"/>
             <if expression="plan == &quot;A&quot; || plan == &quot;a&quot;">
                 <then>

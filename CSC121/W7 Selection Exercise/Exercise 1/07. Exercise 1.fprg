@@ -4,16 +4,16 @@
         <attribute name="name" value="Exercise 1"/>
         <attribute name="authors" value="IRFAN SHAH BIN MAIZUL HISHAM"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-05-23 03:21:44 AM"/>
+        <attribute name="saved" value="2025-05-23 10:49:59 AM"/>
         <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMjo0Njo0MCBBTTsyMjcy"/>
-        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzswMzoyMTo0NCBBTTsxMDsyNDI1"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yMzsxMDo0OTo1OSBBTTsxMTsyNDQw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="destination" type="String" array="False" size=""/>
-            <declare name="code" type="Integer" array="False" size=""/>
-            <declare name="adult, child, adultFare, childFare, tax, totalFare, fareAfterTax" type="Real" array="False" size=""/>
+            <declare name="code, adult, child" type="Integer" array="False" size=""/>
+            <declare name="adultFare, childFare, tax, totalFare, fareAfterTax" type="Real" array="False" size=""/>
             <output expression="&quot;SEPTEMBER Promotion 2025 [from September 10 - 30]&quot;" newline="True"/>
             <output expression="&quot;=========================================&quot;" newline="True"/>
             <output expression="&quot;1. KL - Bali&quot;" newline="True"/>
