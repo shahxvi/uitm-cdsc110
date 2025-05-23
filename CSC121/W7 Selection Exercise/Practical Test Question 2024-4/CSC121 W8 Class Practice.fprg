@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CSC121 W8 Class Practice"/>
+        <attribute name="authors" value="IRFAN SHAH BIN MAIZUL HISHAM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-20 05:12:30 PM"/>
+        <attribute name="created" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTIwOzA0OjQxOjQzIFBNOzIxNzc="/>
+        <attribute name="edited" value="RWxpO1gxLUNBUkJPTjsyMDI1LTA1LTIwOzA1OjEyOjMwIFBNOzI7MjI4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="studentName, lecturerName, class, course, program, labOrlecture" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your name: &quot;" newline="True"/>
+            <input variable="studentName"/>
+            <output expression="&quot;Enter your program: &quot;" newline="True"/>
+            <input variable="program"/>
+            <if expression="program == &quot;CDCS110&quot; || program == &quot;cdcs110&quot;">
+                <then>
+                    <output expression="&quot;RCDCS1101A&quot;" newline="True"/>
+                    <output expression="&quot;RCDCS1101B&quot;" newline="True"/>
+                    <output expression="&quot;Enter your class: &quot;" newline="True"/>
+                    <input variable="class"/>
+                    <if expression="class == &quot;RCDCS1101A&quot; || &quot;rcdcs1101a&quot;">
+                        <then>
+                            <output expression="&quot;CSC121&quot;" newline="True"/>
+                            <output expression="&quot;CSC126&quot;" newline="True"/>
+                            <output expression="&quot;Enter your course: &quot;" newline="True"/>
+                            <input variable="course"/>
+                            <if expression="course == &quot;CSC121&quot; || &quot;csc121&quot;">
+                                <then>
+                                    <output expression="&quot;Lecture or Lab?&quot;" newline="True"/>
+                                    <input variable="labOrlecture"/>
+                                    <if expression="laborlecture == &quot;Lecture&quot;">
+                                        <then>
+                                            <assign variable="lecturerName" expression="&quot;Miss Siti Sarah binti MD Ilyas&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="lecturerName" expression="&quot;Ts. Jamal bin Othman&quot;"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="course == &quot;CSC126&quot; || &quot;csc126&quot;">
+                                        <then>
+                                            <output expression="&quot;Lecture or Lab?&quot;" newline="True"/>
+                                            <input variable="labOrlecture"/>
+                                            <if expression="laborlecture == &quot;Lecture&quot;">
+                                                <then>
+                                                    <assign variable="lecturerName" expression="&quot;Madam Nora Yanti binti Che Jan&quot;"/>
+                                                    <assign variable="course" expression="&quot;CSC126 Lecture&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="lecturerName" expression="&quot;Madam Nora Yanti binti Che Jan&quot;"/>
+                                                    <assign variable="course" expression="&quot;CSC126 Lab&quot;"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid course&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="class == &quot;RCDCS1101B&quot; || &quot;rcdcs1101b&quot;">
+                                <then>
+                                    <output expression="&quot;CSC121&quot;" newline="True"/>
+                                    <output expression="&quot;CSC126&quot;" newline="True"/>
+                                    <output expression="&quot;Enter your course: &quot;" newline="True"/>
+                                    <input variable="course"/>
+                                    <if expression="course == &quot;CSC121&quot; || &quot;csc121&quot;">
+                                        <then>
+                                            <output expression="&quot;Lecture or Lab?&quot;" newline="True"/>
+                                            <input variable="labOrlecture"/>
+                                            <if expression="laborlecture == &quot;Lecture&quot;">
+                                                <then>
+                                                    <assign variable="lecturerName" expression="&quot;Miss Siti Sarah binti MD Ilyas&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="lecturerName" expression="&quot;Ts. Jamal bin Othman&quot;"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="course == &quot;CSC126&quot; || &quot;csc126&quot;">
+                                                <then>
+                                                    <output expression="&quot;Lecture or Lab?&quot;" newline="True"/>
+                                                    <input variable="labOrlecture"/>
+                                                    <if expression="laborlecture == &quot;Lecture&quot;">
+                                                        <then>
+                                                            <assign variable="lecturerName" expression="&quot;Madam Nora Yanti binti Che Jan&quot;"/>
+                                                            <assign variable="course" expression="&quot;CSC126 Lecture&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="lecturerName" expression="&quot;Madam Nora Yanti binti Che Jan&quot;"/>
+                                                            <assign variable="course" expression="&quot;CSC126 Lab&quot;"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Invalid course&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Incorrect class&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Please use a different system&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Student name: &quot; &amp; studentName" newline="True"/>
+            <output expression="&quot;Program: &quot; &amp; program" newline="True"/>
+            <output expression="&quot;Class: &quot; &amp; class" newline="True"/>
+            <output expression="&quot;Course :&quot; &amp; course" newline="True"/>
+            <output expression="&quot;Lecturer: &quot; &amp; lecturerName" newline="True"/>
+            <output expression="&quot;Your attendance have been accepted!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
