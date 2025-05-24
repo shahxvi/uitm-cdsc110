@@ -24,7 +24,6 @@ This repository serves as a compilation of materials, code, and projects that I 
   An introduction to the fundamental principles and teachings of Islam.
 
 - **LCC111** - English for Communicative Competence I
-
   The basics of english to acquire competence in communication.
 
 - **HBU111** - Kesatria Negara I  
