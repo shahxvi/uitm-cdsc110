@@ -21,6 +21,7 @@ This repository serves as a compilation of materials, code, and projects that I 
   Covers foundational mathematics concepts that support problem-solving and logical thinking in computer science.
 
 - **CTU101** - Prinsip-prinsip Asas Islam  
+
   An introduction to the fundamental principles and teachings of Islam.
 
 - **LCC111** - English for Communicative Competence I
