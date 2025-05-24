@@ -23,8 +23,14 @@ This repository serves as a compilation of materials, code, and projects that I 
 - **CTU101** - Prinsip-prinsip Asas Islam  
   An introduction to the fundamental principles and teachings of Islam.
 
+- **LCC111** - English for Communicative Competence I
+  The basics of english to acquire competence in communication.
+
 - **HBU111** - Kesatria Negara I  
   A compulsory co-curricular module focused on physical training and national service values.
+
+- **UED102** - Study Skills
+  A compulsory introduction module on time management, work management and preperation for university life.
 
 ### Branches:
 - **`sem1`**: This branch contains coursework and projects completed during **Semester 1** (24/04/2025 – 13/07/2025), including notes, slides, class coding, group projects, and more.
