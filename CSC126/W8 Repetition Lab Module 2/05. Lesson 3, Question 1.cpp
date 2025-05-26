@@ -7,7 +7,7 @@ int main() {
     int students;
     float mark, total, average;
 
-    for (students = 0; students < 4; students++) {
+    for (students = 0; students < 3; students++) {
     	
         cout << "\nEnter Student Name: ";
         cin >> ws;
