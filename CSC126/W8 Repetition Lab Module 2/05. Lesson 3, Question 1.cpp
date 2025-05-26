@@ -1,34 +1,31 @@
 #include <iostream>
 using namespace std;
 
-int main () {
- 
+int main() {
+	
     char name[30];
     int students;
-    float mark;
+    float mark, total, average;
 
-    for (students = 0; students < 3; students++) {
-    
-    	int subjects = 0, studentCount = 0, subjectCount = 0;
+    for (students = 0; students < 4; students++) {
     	
-    	cout << endl;
-    	
-        cout << "Enter Student Name: ";
-        cin.ignore();
-		cin.getline(name, 30);
+        cout << "\nEnter Student Name: ";
+        cin >> ws;
+        cin.getline(name, 30);
 
-        for (subjects = 0; subjects < 4; subjects++) {
-            
-            while (subjectCount < 4) {
-            
-                cout << "\nEnter the mark for subject " << subjectCount << ": ";
-                cin >> mark;
+        total = 0; //Reset total for each student
 
-				subjectCount++;
-            }
-            mark = mark / subjectCount;
+        for (int subject = 0; subject < 4; subject++) {
+        	
+            cout << "Enter the mark for subject " << (subject + 1) << ": ";
+            cin >> mark;
+            total += mark;
         }
-        
-        cout << "\nThe average mark for " << name << " is " << mark;
+
+        average = total / 4;
+
+        cout << "The average mark for " << name << " is " << average << endl;
     }
+
+    return 0;
 }
