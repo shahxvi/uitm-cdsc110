@@ -23,7 +23,7 @@ int main () {
             femaleCount++;
         
         else 
-            cout << "Invalid input";
+            cout << "Invalid Input" << endl;
     }
 
     cout << "\nThe number of male students is: " << maleCount << endl;
