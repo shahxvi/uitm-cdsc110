@@ -41,7 +41,7 @@ int main() {
         if (average < 50) {
             failedCount++; // Count the number of students who failed
         }
-        
+
         cout << "\nThe highest mark for " << name << " is: " << highestMark << endl;
         cout << "The lowest mark for " << name << " is: " << lowestMark << endl;
     }
