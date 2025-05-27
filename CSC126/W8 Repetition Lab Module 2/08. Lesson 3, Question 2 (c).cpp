@@ -5,16 +5,17 @@ int main () {
     
     int i, j;
 
-    for (i = 0; i < 5; i++) {
-
-        for (j = 0; j < 5; j++) {
-            cout << "@";
+    for (i = 1; i <= 5; i++) {
+        
+        if (i % 2 != 0) {
+            
+            for (j = 0; j < 5; j++) {
+                cout << "@";
+            }
             cout << endl;
         }
 
-        for (j = 0; j < 1; j++)
-            cout << "@";
+        else 
+            cout << "@" << endl;
     }
-
-
 }
