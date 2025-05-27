@@ -8,10 +8,10 @@ int main() {
     int correspondent = 0, correspondentsValid = 0, correspondentsInvalid = 0;
 
     cout << "\nHigh Marks Confidence Survey" << endl;
-    cout << "\nPlease enter your score for each question." << endl;
+    cout << "Please enter your score for each question." << endl;
 
     while (i == 1) {
-        cout << "From 1 (least likely) to 5 (most likely) of getting a high marks fo any programming subject: ";
+        cout << "\nFrom 1 to 5 (least to most likely) of getting a high marks for any programming subject: ";
         cin >> score;
 
         switch (score) {
@@ -31,9 +31,10 @@ int main() {
                 score5++;
                 break;
             default:
-                cout << "\nInvalid score. Please enter a score between 0 and 5." << endl;
+                cout << "Invalid score. Please enter a score between 0 and 5." << endl;
                 i = 1;
                 invalidScore++;
+                break;
         }
 
 
@@ -46,8 +47,19 @@ int main() {
             invalidScore++;
             correspondentsInvalid++;
         }
-    }
-            
+
+        correspondent++;
+
         cout << "Continue for another correspondent? (1 for Yes, 0 for No): ";
         cin >> i;
+    } 
+    
+    cout << "Number of respondents that answered 1: " << score1 << endl;
+    cout << "Number of respondents that answered 2: " << score2 << endl;
+    cout << "Number of respondents that answered 3: " << score3 << endl;
+    cout << "Number of respondents that answered 4: " << score4 << endl;
+    cout << "Number of respondents that answered 5: " << score5 << endl;
+
+    cout << "\nTotal correspondents: " << correspondent << endl;
+    cout << "Average score result: " << (score1 + score2 + score3 + score4 + score5) / correspondent << endl;
 }

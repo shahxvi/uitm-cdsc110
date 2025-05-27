@@ -10,9 +10,9 @@ int main() {
     cout << "-----\t\t-----\t\t---------------" << endl;
 
     while (meter <= 10) {
+
         float cm = meter * 100;
         float inch = cm / 2.54;
-
 
         cout << meter << "\t\t";
         cout << inch << "\t\t";
