@@ -26,5 +26,7 @@ int main() {
 
         cout << "\nThe average mark for " << name << " is " << average << endl;
     }
-
+    cout << endl;
+    system("pause");
+    return 0;
 }
