@@ -4,25 +4,24 @@ using namespace std;
 int main() {
 	
     char name[30];
-    int students;
-    float mark, total, average;
+    float mark = 0, total, average;
 
-    for (students = 0; students < 3; students++) {
+    for (int students = 0; students < 3; students++) {      //outerLoop for students
     	
         cout << "\nEnter student name: ";
         cin >> ws;
         cin.getline(name, 30);
 
-        total = 0; //Reset total for each student
+        total = 0; //Reset total mark for each student
 
-        for (int subject = 1; subject < 5; subject++) {
+        for (int subject = 1; subject < 5; subject++) { //innerLoop for subjects
         	
             cout << "Enter the mark for subject " << (subject) << ": ";
             cin >> mark;
             total += mark;
         }
 
-        average = total / 4;
+        average = total / 4.0;
 
         cout << "\nThe average mark for " << name << " is " << average << endl;
     }
