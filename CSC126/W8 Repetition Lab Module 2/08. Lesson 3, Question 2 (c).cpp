@@ -3,7 +3,7 @@ using namespace std;
 
 int main () {
     
-    int i, j;
+    int i, j; // i = row, j = column
 
     for (i = 1; i <= 5; i++) {
         
