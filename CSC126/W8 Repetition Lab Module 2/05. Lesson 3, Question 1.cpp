@@ -9,15 +9,15 @@ int main() {
 
     for (students = 0; students < 3; students++) {
     	
-        cout << "\nEnter Student Name: ";
+        cout << "\nEnter student name: ";
         cin >> ws;
         cin.getline(name, 30);
 
         total = 0; //Reset total for each student
 
-        for (int subject = 0; subject < 4; subject++) {
+        for (int subject = 1; subject < 5; subject++) {
         	
-            cout << "Enter the mark for subject " << (subject + 1) << ": ";
+            cout << "Enter the mark for subject " << (subject) << ": ";
             cin >> mark;
             total += mark;
         }
