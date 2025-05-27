@@ -24,8 +24,7 @@ int main() {
 
         average = total / 4;
 
-        cout << "The average mark for " << name << " is " << average << endl;
+        cout << "\nThe average mark for " << name << " is " << average << endl;
     }
 
-    return 0;
 }
