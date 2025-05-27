@@ -42,6 +42,7 @@ int main() {
             failedCount++; // Count the number of students who failed
         }
 
+        cout << "\nThe average mark for " << name << " is: " << average << endl;
         cout << "\nThe highest mark for " << name << " is: " << highestMark << endl;
         cout << "The lowest mark for " << name << " is: " << lowestMark << endl;
     }
