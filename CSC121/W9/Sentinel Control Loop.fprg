@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="While Looping"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-27 05:50:46 PM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yNzswNToyMjowNyBQTTsyMjkw"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNS0yNzswNTo1MDo0NiBQTTsxOzI0MDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="countAll, countOdd, countEven" type="Integer" array="False" size=""/>
+            <declare name="IntVal, sum, avg" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="countAll" expression="0"/>
+            <assign variable="countEven" expression="0"/>
+            <assign variable="countOdd" expression="0"/>
+            <output expression="&quot;Enter value: &quot;" newline="True"/>
+            <input variable="IntVal"/>
+            <while expression="IntVal != 999">
+                <assign variable="sum" expression="sum + IntVal"/>
+                <if expression="IntVal % 2 == 0">
+                    <then>
+                        <assign variable="countEven" expression="countEven + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="IntVal % 2 != 0">
+                    <then>
+                        <assign variable="countOdd" expression="countOdd + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="countAll" expression="countAll + 1"/>
+                <output expression="&quot;Enter value: &quot;" newline="True"/>
+                <input variable="IntVal"/>
+            </while>
+            <assign variable="avg" expression="sum / countAll"/>
+            <output expression="&quot;Sum: &quot; &amp; sum" newline="True"/>
+            <output expression="&quot;Average: &quot; &amp; avg" newline="True"/>
+            <output expression="&quot;Even: &quot; &amp; countEven" newline="True"/>
+            <output expression="&quot;Odd: &quot; &amp; countOdd" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
