@@ -162,5 +162,7 @@ int main() {
     cout << "Quantity: " << quantity << endl;
     cout << "Total Price: RM" << totalPrice << endl;
 
+    cout << endl;
+    system("pause");
     return 0;
 }
