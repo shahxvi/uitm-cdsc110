@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="W10"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-13 12:25:45 PM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0xMzswOToxNjo1MiBBTTsyMjc4"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0xMzsxMjoyNTo0NSBQTTszOzIzOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Item Code &amp; Item Name Initialization"/>
+            <declare name="itemCode, nameM1, nameM2, nameM3, nameM4" type="String" array="False" size=""/>
+            <assign variable="nameM1" expression="&quot;Chicken Burger&quot;"/>
+            <assign variable="nameM2" expression="&quot;Rainbow Fillet&quot;"/>
+            <assign variable="nameM3" expression="&quot;No-Salt Fries&quot;"/>
+            <assign variable="nameM4" expression="&quot;Soft-Drink&quot;"/>
+            <comment text="Price Initialization"/>
+            <declare name="priceM1, priceM2, priceM3, priceM4" type="Real" array="False" size=""/>
+            <assign variable="priceM1" expression="4.59"/>
+            <assign variable="priceM2" expression="2.99"/>
+            <assign variable="priceM3" expression="1.05"/>
+            <assign variable="priceM4" expression="2.49"/>
+            <comment text="Quantity Initialization"/>
+            <declare name="quantityM1, quantityM2, quantityM3, quantityM4" type="Integer" array="False" size=""/>
+            <assign variable="quantityM1" expression="0"/>
+            <assign variable="quantityM2" expression="0"/>
+            <assign variable="quantityM3" expression="0"/>
+            <assign variable="quantityM4" expression="0"/>
+            <comment text="Subtotal &amp; Total Initialization"/>
+            <declare name="subtotalM1, subtotalM2, subtotalM3, subtotalM4" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <comment text="LCV Initialization"/>
+            <declare name="ID" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <output expression="&quot;MyCafe Outlet&quot;" newline="True"/>
+            <while expression="i == 1">
+                <output expression="&quot;Enter item code (M1/M2/M3/M4): &quot;" newline="True"/>
+                <input variable="itemCode"/>
+                <while expression="itemCode != &quot;M1&quot; &amp;&amp; itemCode != &quot;m1&quot; &amp;&amp; itemCode != &quot;M2&quot; &amp;&amp; itemCode != &quot;m2&quot; &amp;&amp; itemCode != &quot;M3&quot; &amp;&amp; itemCode != &quot;m3&quot; &amp;&amp; itemCode != &quot;M4&quot; &amp;&amp; itemCode != &quot;m4&quot;">
+                    <output expression="&quot;Please enter correct item code: &quot;" newline="True"/>
+                    <input variable="itemCode"/>
+                </while>
+                <if expression="itemCode == &quot;M1&quot; || itemCode == &quot;m1&quot;">
+                    <then>
+                        <if expression="quantityM1 != 0">
+                            <then>
+                                <assign variable="quantityM1" expression="quantityM1 + 1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Enter Quantity: &quot;" newline="True"/>
+                                <input variable="quantityM1"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="itemCode == &quot;M2&quot; || itemCode == &quot;m2&quot;">
+                    <then>
+                        <if expression="quantityM2 != 0">
+                            <then>
+                                <assign variable="quantityM2" expression="quantityM2 + 1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Enter Quantity: &quot;" newline="True"/>
+                                <input variable="quantityM2"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="itemCode == &quot;M3&quot; || itemCode == &quot;m3&quot;">
+                    <then>
+                        <if expression="quantityM3 != 0">
+                            <then>
+                                <assign variable="quantityM3" expression="quantityM3 + 1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Enter Quantity: &quot;" newline="True"/>
+                                <input variable="quantityM3"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="itemCode == &quot;M4&quot; || itemCode == &quot;m4&quot;">
+                    <then>
+                        <if expression="quantityM4 != 0">
+                            <then>
+                                <assign variable="quantityM4" expression="quantityM4 + 1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Enter Quantity: &quot;" newline="True"/>
+                                <input variable="quantityM4"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Do you want to make another order? (Y/N): &quot;" newline="True"/>
+                <input variable="ID"/>
+                <if expression="ID == &quot;Y&quot; || ID == &quot;y&quot;">
+                    <then/>
+                    <else>
+                        <assign variable="i" expression="0"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Menu Item - Quantity&quot;" newline="True"/>
+            <output expression="nameM1 &amp; &quot; - &quot; &amp; quantityM1" newline="True"/>
+            <output expression="nameM2 &amp; &quot; - &quot; &amp; quantityM2" newline="True"/>
+            <output expression="nameM3 &amp; &quot; - &quot; &amp; quantityM3" newline="True"/>
+            <output expression="nameM4 &amp; &quot; - &quot; &amp; quantityM4" newline="True"/>
+            <comment text="Subtotal Calculation "/>
+            <assign variable="subtotalM1" expression="priceM1 * quantityM1"/>
+            <assign variable="subtotalM2" expression="priceM2 * quantityM2"/>
+            <assign variable="subtotalM3" expression="priceM3 * quantityM3"/>
+            <assign variable="subtotalM4" expression="priceM4 * quantityM4"/>
+            <comment text="Total Calculation"/>
+            <assign variable="total" expression="subtotalM1 + subtotalM2 + subtotalM3 + subtotalM4"/>
+            <output expression="&quot;Total Price: &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
