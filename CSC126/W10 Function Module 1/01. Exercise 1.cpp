@@ -46,3 +46,5 @@ int tot(int a, int b) {
 float avg(int a, int b) {
 	return (a + b) / 2.0;
 }
+
+//First ever program written using Vim on Linux Mint
