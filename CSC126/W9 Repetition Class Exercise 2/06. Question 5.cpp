@@ -8,7 +8,7 @@ int main() {
 
 	float maxDiastolic = -999;
 	float minSystolic = 999;
-
+	
 	int lowBloodPressure = 0;
 	int highBloodPressure = 0;
 
