@@ -4,27 +4,25 @@ using namespace std;
 int main()
 {
         char input;
-        bool symbol;
-        int digit = 0, alpha = 0;
+        int digit = 0, alpha = 0, none = 0;
     
         for (int counter = 0; counter < 10; counter++) {
                 cout << "Enter a symbol: ";
                 cin >> input;
-                
-                symbol = isdigit(input);
 
-                if (symbol) {
-                        cout << "You entered a digit: " << input << endl;
+                if (isdigit(input))
                         digit++;
-                }
                 
-                else {
-                        cout << "You entered an alphabet: " << input << endl;
+                else if (isalpha(input))
                         alpha++;
-                }
+
+                else
+                        none++;
         }
         
-        cout << "You entered a total of " << digit << " digits and " << alpha << " alphabets." << endl;
+        cout << "The number of digits is: " << digit << endl;
+        cout << "The number of alphabetic characters is: " << alpha << endl;
+        cout << "The number of other characters is: " << none << endl;
 
         system("pause");
         return 0;
