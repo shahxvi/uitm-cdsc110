@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exercise 1"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-17 05:31:21 PM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0xNzswNDo0Njo0MyBQTTsyMjk1"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0xNzswNTozMToyMSBQTTs0OzIzOTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Real" array="True" size="2"/>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Please enter first number: &quot;" newline="True"/>
+                <input variable="n[0]"/>
+                <output expression="&quot;Please enter second number: &quot;" newline="True"/>
+                <input variable="n[1]"/>
+                <assign variable="sum" expression="n[0] + n[1]"/>
+                <output expression="&quot;The sum of &quot; &amp; n[0] &amp; &quot; + &quot; &amp; n[1] &amp; &quot; is &quot; &amp; sum" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
