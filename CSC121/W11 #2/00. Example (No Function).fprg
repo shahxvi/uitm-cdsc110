@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example (No Function)"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-20 11:40:46 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMDoxMjo1MyBBTTsyMjY1"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMTo0MDo0MiBBTTsxO1NoYWg7WDEtQ0FSQk9OOzIwMjUtMDYtMjA7MTE6MjM6MDMgQU07RXhhbXBsZSAoRnVuY3Rpb24gVHlwZSAxICYgMykuZnByZzs3NTgy"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMTo0MDo0NiBBTTsyOzIzNzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the first number: &quot;" newline="False"/>
+            <input variable="num1"/>
+            <output expression="&quot;Enter the second number: &quot;" newline="False"/>
+            <input variable="num2"/>
+            <assign variable="sum" expression="num1 + num2"/>
+            <output expression="&quot;The summation of &quot; &amp; a &amp; &quot; and &quot; &amp; b &amp; &quot; is &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

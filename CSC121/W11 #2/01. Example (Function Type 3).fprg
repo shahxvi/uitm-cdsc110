@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example (Function Type 3)"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-20 11:41:03 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMToyMzowMyBBTTsyMjYz"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMToyMzowNSBBTTsxO1NoYWg7WDEtQ0FSQk9OOzIwMjUtMDYtMjA7MTA6MTI6NTMgQU07RXhhbXBsZSAoTm8gRnVuY3Rpb24pLmZwcmc7NzEyMQ=="/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMTo0MTowMyBBTTsyOzIzNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the first number: &quot;" newline="False"/>
+            <input variable="num1"/>
+            <output expression="&quot;Enter the second number: &quot;" newline="False"/>
+            <input variable="num2"/>
+            <call expression="summation(num1,num2)"/>
+        </body>
+    </function>
+    <function name="summation" type="None" variable="sum">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="a + b"/>
+            <output expression="&quot;The summation of &quot; &amp; a &amp; &quot; and &quot; &amp; b &amp; &quot; is &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

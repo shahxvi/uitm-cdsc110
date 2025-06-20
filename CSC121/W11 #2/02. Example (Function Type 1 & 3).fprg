@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Example (Function Type 3)"/>
+        <attribute name="authors" value="Shah"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-20 11:54:56 AM"/>
+        <attribute name="created" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMToyMzowMyBBTTsyMjYz"/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMToyMzowNSBBTTsxO1NoYWg7WDEtQ0FSQk9OOzIwMjUtMDYtMjA7MTA6MTI6NTMgQU07RXhhbXBsZSAoTm8gRnVuY3Rpb24pLmZwcmc7NzEyMQ=="/>
+        <attribute name="edited" value="U2hhaDtYMS1DQVJCT047MjAyNS0wNi0yMDsxMTo1NDo1NiBBTTs3OzIzODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, choice" type="Integer" array="False" size=""/>
+            <declare name="cont" type="String" array="False" size=""/>
+            <do expression="cont == &quot;Y&quot; or cont == &quot;y&quot;">
+                <call expression="welcome"/>
+                <call expression="Menu"/>
+                <input variable="choice"/>
+                <while expression="choice &lt; 1 or choice &gt; 3">
+                    <call expression="errorMessage"/>
+                    <call expression="Menu"/>
+                    <input variable="choice"/>
+                </while>
+                <output expression="&quot;Enter the first number: &quot;" newline="False"/>
+                <input variable="num1"/>
+                <output expression="&quot;Enter the second number: &quot;" newline="False"/>
+                <input variable="num2"/>
+                <if expression="choice == 1">
+                    <then>
+                        <call expression="summation(num1,num2)"/>
+                    </then>
+                    <else>
+                        <if expression="choice == 2">
+                            <then>
+                                <call expression="subtraction(num1,num2)"/>
+                            </then>
+                            <else>
+                                <call expression="multiplication(num1,num2)"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Do you want to continue? (Y/N): &quot;" newline="True"/>
+                <input variable="cont"/>
+            </do>
+            <output expression="&quot;Thank You&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="errorMessage" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Sorry, you have selected the wrong function&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;1 - Summation&quot;" newline="True"/>
+            <output expression="&quot;2 - Subtraction&quot;" newline="True"/>
+            <output expression="&quot;3 - Multiplication&quot;" newline="True"/>
+            <output expression="&quot;Please make your choice (1 - 3): &quot;" newline="False"/>
+        </body>
+    </function>
+    <function name="multiplication" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="multiply" type="Integer" array="False" size=""/>
+            <assign variable="multiply" expression="a * b"/>
+            <output expression="&quot;The multiplication of &quot; &amp; a &amp; &quot; and &quot; &amp; b &amp; &quot; is &quot; &amp; multiply" newline="True"/>
+        </body>
+    </function>
+    <function name="subtraction" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="subtract" type="Integer" array="False" size=""/>
+            <assign variable="subtract" expression="a - b"/>
+            <output expression="&quot;The subtraction of &quot; &amp; a &amp; &quot; and &quot; &amp; b &amp; &quot; is &quot; &amp; subtract" newline="True"/>
+        </body>
+    </function>
+    <function name="summation" type="None" variable="sum">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="a + b"/>
+            <output expression="&quot;The summation of &quot; &amp; a &amp; &quot; and &quot; &amp; b &amp; &quot; is &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+    <function name="welcome" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to calculator app&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
